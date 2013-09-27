@@ -1,0 +1,25 @@
+{
+  "name": "pm2-panel",
+  "version": "0.0.0",
+  "description": "the missing web/mobile panel of pm2 monitor",
+  "logo":"http://ww3.sinaimg.cn/large/61ff0de3gw1e90zxd19shj201k014742.jpg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/turingou/pm2-panel.git"
+  },
+  "keywords": [
+    "pm2",
+    "panel",
+    "forver",
+    "monitor"
+  ],
+  "author": "turing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/pm2-panel/issues"
+  }
+}
