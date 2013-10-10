@@ -5,13 +5,30 @@ the missing web/mobile panel of pm2 monitor by [turing](https://npmjs.org/~turin
 ### Installation
 ````
 $ npm install pm2-panel
-// or install globally
-$ sudo npm install pm2-panel -g
+````
+
+### Demo in repo
+````
+$ git clone https://github.com/turingou/pm2-panel.git
+$ cd pm2-panel
+$ cp app.simple.js app.js
+$ vi app.js
+$ node app.js // or pm2 start app.js
 ````
 
 ### Example
 ````javascript
-var pm2-panel = require('pm2-panel');
+var panel = require('pm2-panel');
+
+// init a new server running on port 3000
+new panel({
+    name: 'pm2-panel',
+    desc: 'the missing web/mobile panel of pm2 monitor',
+    url: 'http://abc.com'
+    // your pm2 api server(optional)
+    // default by http://localhost:9615 or $url:9615(env: production)
+    api: 'http://anotherServer.com:9999'
+}).run();
 ````
 
 ### API

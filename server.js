@@ -48,6 +48,9 @@ var Server = function(params) {
         app.use(express.static(path.join(__dirname, 'public')));
         app.use(app.router);
 
+        // default api server config
+        if (!params.api) params.api = (app.get('env') != 'production') ? 'http://localhost:9615': params.url + ':9615'
+
         // locals
         app.locals.sys = sys;
         app.locals.site = params;
@@ -59,7 +62,7 @@ var Server = function(params) {
 
         // home
         app.get('/', index);
-        if (params.api) app.get('/api', seesaw.redirect(params.api))
+        app.get('/api', seesaw.redirect(params.api)) // in case of window.api get lost
 
         // 404
         app.get('*', errors.notfound)
