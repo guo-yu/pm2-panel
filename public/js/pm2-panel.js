@@ -2,38 +2,10 @@ window.pm2panel = angular.module('pm2panel', ['store']);
 
 // global ctrlers
 pm2panel['ctrlers'] = {
-    search: function($scope, Store) {
-        $scope.fetch = function() {
-            console.log('changed')
-            console.log($scope.search.keyword)
-        }
-    },
-    board: {
-        list: function($scope, Store) {
-            $scope.open = false;
-            $scope.arrow = 'icon-circle-arrow-down';
-            $scope.ls = function() {
-                if (!$scope.open) {
-                    if (!$scope.boards) {
-                        $scope.arrow = 'icon-spinner icon-spin';
-                        Store.board.get({
-                            action: 'ls'
-                        }, function(result) {
-                            if (result.stat == 'ok') {
-                                $scope.boards = result.boards;
-                                $scope.open = true;
-                                $scope.arrow = 'icon-circle-arrow-up';
-                            };
-                        });
-                    } else {
-                        $scope.open = true;
-                        $scope.arrow = 'icon-circle-arrow-up';
-                    }
-                } else {
-                    $scope.open = false;
-                    $scope.arrow = 'icon-circle-arrow-down';
-                }
-            }
-        }
+    dashboard: function($scope, Store) {
+        Store.api.get({},function(result){
+            console.log(result);
+            $scope.panel = result;
+        });
     }
 }

@@ -8,6 +8,7 @@ $ npm install pm2-panel
 ````
 
 ### Demo in repo
+make sure you've active `pm2 web` early.
 ````
 $ git clone https://github.com/turingou/pm2-panel.git
 $ cd pm2-panel

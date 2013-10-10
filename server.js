@@ -26,6 +26,9 @@ var Server = function(params) {
         // routers
         var index = require('./routes/index');
 
+        // default api server config
+        if (!params.api) params.api = (app.get('env') != 'production') ? 'http://localhost:9615': params.url + ':9615'
+
         // all environments
         app.set('env', params.env ? params.env : 'development');
         app.set('views', __dirname + '/views');
@@ -46,10 +49,8 @@ var Server = function(params) {
             src: __dirname + '/public'
         }));
         app.use(express.static(path.join(__dirname, 'public')));
+        app.use('/api', seesaw.redirect(params.api));
         app.use(app.router);
-
-        // default api server config
-        if (!params.api) params.api = (app.get('env') != 'production') ? 'http://localhost:9615': params.url + ':9615'
 
         // locals
         app.locals.sys = sys;
@@ -62,7 +63,6 @@ var Server = function(params) {
 
         // home
         app.get('/', index);
-        app.get('/api', seesaw.redirect(params.api)) // in case of window.api get lost
 
         // 404
         app.get('*', errors.notfound)
@@ -78,7 +78,6 @@ Server.prototype.run = function(port) {
     var defaultPort = 3000;
     this.app.set('port', (port && !isNaN(parseInt(port, 10))) ? parseInt(port, 10) : defaultPort);
     this.app.locals.root = (this.app.get('env') === 'production') ? this.params.url : 'http://localhost:' + this.app.get('port');
-    console.log(this.app.locals);
     http.createServer(this.app).listen(this.app.get('port'));
 }
 

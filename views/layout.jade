@@ -9,9 +9,16 @@ html(ng-app="pm2panel")
     link(rel='shortcut icon',type="image/x-icon",href="/images/favicon.ico")
     link(rel='stylesheet', href='/css/style.css')
   body
+    block header
+        #header
+            #ihd.container.clearfix
+                .row
+                    .col-lg-12
+                      #logo.clearfix
+                        h1
+                            a(href="/").logo #{site.name}
+                                span.desc #{site.desc}
     block content
-    script.
-        window.api = '#{site.api}';
     script(src="/js/lib/jquery/jquery-1.10.2.min.js")
     script(src="/js/lib/angular/angular.min.js")
     script(src="/js/lib/angular/angular-resource.min.js")
