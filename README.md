@@ -33,7 +33,7 @@ new panel({
 ````
 
 ### API
-check this file: `index.js`
+check this file: `server.js`
 
 ### Contributing
 - Fork this repo

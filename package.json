@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "the missing web/mobile panel of pm2 monitor",
   "logo":"http://ww3.sinaimg.cn/large/61ff0de3gw1e90zxd19shj201k014742.jpg",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
