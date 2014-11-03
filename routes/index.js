@@ -5,5 +5,5 @@ function routes(app) {
 }
 
 function home(req, res, next) {
-  res.send('ok');
+  res.render('home');
 }

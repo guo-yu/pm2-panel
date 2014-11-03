@@ -4,7 +4,7 @@
   "description": "the missing web and mobile panel of pm2 monitor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "DEBUG=pm2-panel,pm2-panel:* node pm2-panel.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,11 @@
     "url": "https://github.com/turingou/pm2-panel/issues"
   },
   "dependencies": {
+    "body-parser": "^1.9.2",
+    "compression": "^1.2.0",
     "debug": "^2.1.0",
-    "express-scaffold": "^0.4.2"
+    "express": "^4.10.1",
+    "morgan": "^1.4.1",
+    "swig": "^1.4.2"
   }
 }

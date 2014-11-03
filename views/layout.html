@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{{site.name}}{% endblock %}</title>
+  {% block head %}
+  <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/libs/nprogress/nprogress.css">
+  <link rel="stylesheet" href="/css/pm2-panel.css">
+  {% endblock %}
+  <script src="/javascript/pm2-panel.js"></script>
+  <script src="/libs/angular/angular.min.js"></script>
+  <script src="/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="/libs/nprogress/nprogress.js"></script>
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>
