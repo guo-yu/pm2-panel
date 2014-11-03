@@ -1,24 +1,24 @@
 ## ![logo](http://ww3.sinaimg.cn/large/61ff0de3gw1e90zxd19shj201k014742.jpg) pm2-panel ![npm](https://badge.fury.io/js/pm2-panel.png)
 
-the missing web/mobile panel of pm2 monitor by [turing](https://npmjs.org/~turing) 
+the missing web and mobile panel of pm2 monitor
 
 ### Installation
-````
+```bash
 $ npm install pm2-panel
-````
+```
 
-### Demo in repo
+### Example
 make sure you've active `pm2 web` early.
-````
+```bash
 $ git clone https://github.com/turingou/pm2-panel.git
 $ cd pm2-panel
 $ cp app.simple.js app.js
 $ vi app.js
 $ node app.js // or pm2 start app.js
-````
+```bash
 
 ### Example
-````javascript
+```js
 var panel = require('pm2-panel');
 
 // init a new server running on port 3000
@@ -30,10 +30,7 @@ new panel({
     // default by http://localhost:9615 or $url:9615(env: production)
     api: 'http://anotherServer.com:9999'
 }).run();
-````
-
-### API
-check this file: `server.js`
+```
 
 ### Contributing
 - Fork this repo
@@ -64,7 +61,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
 
 ---
 ![docor](https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/doctor.png)

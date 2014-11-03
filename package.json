@@ -1,9 +1,8 @@
 {
   "name": "pm2-panel",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "the missing web/mobile panel of pm2 monitor",
-  "logo":"http://ww3.sinaimg.cn/large/61ff0de3gw1e90zxd19shj201k014742.jpg",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,9 +22,6 @@
     "url": "https://github.com/turingou/pm2-panel/issues"
   },
   "dependencies": {
-    "express": "3.3.1",
-    "jade": "*",
-    "less-middleware": "*",
-    "seesaw": "*"
+    "express-scaffold": "^0.4.2"
   }
 }

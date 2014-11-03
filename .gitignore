@@ -4,4 +4,4 @@ node_modules
 psd
 thumb
 *.log
-demo.js
+public/libs/*
