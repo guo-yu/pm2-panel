@@ -1,7 +1,7 @@
 {
   "name": "pm2-panel",
   "version": "0.1.0",
-  "description": "the missing web/mobile panel of pm2 monitor",
+  "description": "the missing web and mobile panel of pm2 monitor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,6 +22,7 @@
     "url": "https://github.com/turingou/pm2-panel/issues"
   },
   "dependencies": {
+    "debug": "^2.1.0",
     "express-scaffold": "^0.4.2"
   }
 }
